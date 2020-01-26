@@ -14,12 +14,17 @@ public class Solution {
             if (numberOfPositionsItHasMovedForward > 2) {
                 return "Too chaotic";
             }
-            if (numberOfPositionsItHasMovedForward > 0) {
-                numberOfBribes += numberOfPositionsItHasMovedForward;
+
+            int initialPosition = Math.max(inputArray[i] - 2, 0);
+            int currentPosition = i;
+
+            for (int j = initialPosition; j <= currentPosition; j++) {
+                if (inputArray[j] > inputArray[i]) {
+                    numberOfBribes++;
+                }
+
             }
-
         }
-
         return String.valueOf(numberOfBribes);
     }
 
