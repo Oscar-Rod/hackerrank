@@ -15,10 +15,10 @@ public class Solution {
                 return "Too chaotic";
             }
 
-            int initialPosition = Math.max(inputArray[i] - 2, 0);
+            int initialPositionMinusOne = Math.max(inputArray[i] - 2, 0);
             int currentPosition = i;
 
-            for (int j = initialPosition; j <= currentPosition; j++) {
+            for (int j = initialPositionMinusOne; j <= currentPosition; j++) {
                 if (inputArray[j] > inputArray[i]) {
                     numberOfBribes++;
                 }
