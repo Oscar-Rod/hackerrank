@@ -10,16 +10,20 @@ public class Solution {
             if (!wordsInMagazine.containsKey(word)) {
                 return "No";
             } else {
-                int numberOfTimesTheWordAppears = wordsInMagazine.get(word);
-                numberOfTimesTheWordAppears--;
-                if (numberOfTimesTheWordAppears <= 0) {
-                    wordsInMagazine.remove(word);
-                } else {
-                    wordsInMagazine.put(word, numberOfTimesTheWordAppears);
-                }
+                updateNumberOfTimesTheWordAppears(wordsInMagazine, word);
             }
         }
         return "Yes";
+    }
+
+    private static void updateNumberOfTimesTheWordAppears(Map<String, Integer> wordsInMagazine, String word) {
+        int numberOfTimesTheWordAppears = wordsInMagazine.get(word);
+        numberOfTimesTheWordAppears--;
+        if (numberOfTimesTheWordAppears <= 0) {
+            wordsInMagazine.remove(word);
+        } else {
+            wordsInMagazine.put(word, numberOfTimesTheWordAppears);
+        }
     }
 
     private static Map<String, Integer> createDictionary(String[] magazine) {
