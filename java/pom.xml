@@ -13,6 +13,8 @@
         <module>MinimumSwaps2</module>
         <module>ArrayManipulation</module>
         <module>RansomNote</module>
+        <module>TwoStrings</module>
+        <module>Utils</module>
     </modules>
 
     <dependencies>
