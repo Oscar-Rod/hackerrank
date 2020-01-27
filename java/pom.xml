@@ -11,6 +11,8 @@
     <modules>
         <module>NewYearChaos</module>
         <module>MinimumSwaps2</module>
+        <module>ArrayManipulation</module>
+        <module>RansomNote</module>
     </modules>
 
     <dependencies>
