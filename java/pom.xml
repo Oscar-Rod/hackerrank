@@ -15,12 +15,19 @@
         <module>RansomNote</module>
         <module>TwoStrings</module>
         <module>Utils</module>
+        <module>SherlockAndAnagrams</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
             <version>5.5.2</version>
             <scope>test</scope>
         </dependency>

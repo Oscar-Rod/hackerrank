@@ -1,16 +1,21 @@
 package utils;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Utils {
 
-    public static Set<String> generateAllSubStrings(String longString, int maximumLength) {
-        Set<String> allSubstrings = new HashSet<>();
+    public static Map<String, Integer> generateAllSubStrings(String longString, int maximumLength) {
+        Map<String, Integer> allSubstrings = new HashMap<>();
         int lengthOfSubstring = 1;
         while (lengthOfSubstring <= maximumLength) {
             for (int i = 0; i <= longString.length() - lengthOfSubstring; i++) {
-                allSubstrings.add(longString.substring(i, i + lengthOfSubstring));
+                String substring = longString.substring(i, i + lengthOfSubstring);
+                if (allSubstrings.containsKey(substring)) {
+                    allSubstrings.put(substring, allSubstrings.get(substring) + 1);
+                } else {
+                    allSubstrings.put(substring, 1);
+                }
             }
             lengthOfSubstring++;
         }
